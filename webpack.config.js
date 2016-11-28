@@ -2,7 +2,7 @@ module.exports = {
   devtool: "source-map",
   entry: "./src/main.ts",
   output: {
-    filename: "./main.js",
+    filename: "./build/main.js",
     pathinfo: true,
     libraryTarget: "commonjs2",
     sourceMapFilename: '[file].map.js', // normally this is [file].map, but we need a js file, or it will be rejected by screeps server.
