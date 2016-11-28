@@ -1,0 +1,6 @@
+screeps:
+  endpoint: https://screeps.com/api/user/code
+  branch: test
+  auth:
+    email: ''
+    pass: ''

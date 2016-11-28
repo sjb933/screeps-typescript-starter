@@ -1,0 +1,6 @@
+screeps:
+  endpoint: SCREEPS_ENDPOINT
+  branch: SCREEPS_BRANCH
+  auth:
+    email: SCREEPS_EMAIL
+    pass: SCREEPS_PASS
