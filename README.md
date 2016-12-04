@@ -18,7 +18,7 @@ Typings need to be installed for the global Screeps and Lodash libraries made av
 
 Typings dependencies are configured in the top-level `typings.json` file and will be installed to a local `./typings/` directory.
 
-# Deploy To Screep Server
+# Deploy To Screeps Server
 This project makes available a simple module for deploying to the Screeps server via the [REST API](http://support.screeps.com/hc/en-us/articles/203022612-Committing-scripts-using-direct-API-access).
 
 **NOTE**: Deployment via the API will override *all* files in the targeted branch.
@@ -28,6 +28,7 @@ The `deploy.js` script depends on a few configuration values for deployment (bra
 
 ### Environment Variables (recommended)
 Deployment configuration can be set via the following ENV VARS.  The variable names along with their default settings are shown below.
+
 - **SCREEPS_ENDPOINT:** `https://screeps.com/api/user/code`
 
 - **SCREEPS_BRANCH:** `test`
