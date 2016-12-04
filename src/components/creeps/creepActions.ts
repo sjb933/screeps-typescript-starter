@@ -1,13 +1,6 @@
 import * as Config from "../../config/config";
 
-/**
- * Shorthand method for `Creep.moveTo()`.
- *
- * @export
- * @param {Creep} creep
- * @param {(Structure | RoomPosition)} target
- * @returns {number}
- */
+// A wrapper for `Creep.moveTo()`.
 export function moveTo(creep: Creep, target: Structure | RoomPosition): number {
   let result: number = 0;
 
@@ -17,50 +10,24 @@ export function moveTo(creep: Creep, target: Structure | RoomPosition): number {
   return result;
 }
 
-/**
- * Returns true if the `ticksToLive` of a creep has dropped below the renew
- * limit set in config.
- *
- * @export
- * @param {Creep} creep
- * @returns {boolean}
- */
+// Returns true if the `ticksToLive` of a creep has dropped below the renew limit set in config.
 export function needsRenew(creep: Creep): boolean {
   return (creep.ticksToLive < Config.DEFAULT_MIN_LIFE_BEFORE_NEEDS_REFILL);
 }
 
-/**
- * Shorthand method for `renewCreep()`.
- *
- * @export
- * @param {Creep} creep
- * @param {Spawn} spawn
- * @returns {number}
- */
+// Shorthand method for `renewCreep()`.
 export function tryRenew(creep: Creep, spawn: Spawn): number {
   return spawn.renewCreep(creep);
 }
 
-/**
- * Moves a creep to a designated renew spot (in this case the spawn).
- *
- * @export
- * @param {Creep} creep
- * @param {Spawn} spawn
- */
+// Moves a creep to a designated renew spot (in this case the spawn).
 export function moveToRenew(creep: Creep, spawn: Spawn): void {
   if (tryRenew(creep, spawn) === ERR_NOT_IN_RANGE) {
     creep.moveTo(spawn);
   }
 }
 
-/**
- * Attempts transferring available resources to the creep.
- *
- * @export
- * @param {Creep} creep
- * @param {RoomObject} roomObject
- */
+// Attempts transferring available resources to the creep.
 export function getEnergy(creep: Creep, roomObject: RoomObject): void {
   let energy: Resource = <Resource> roomObject;
 
@@ -73,14 +40,7 @@ export function getEnergy(creep: Creep, roomObject: RoomObject): void {
   }
 }
 
-/**
- * Returns true if a creep's `working` memory entry is set to true, and false
- * otherwise.
- *
- * @export
- * @param {Creep} creep
- * @returns {boolean}
- */
+// Returns true if a creep's `working` memory entry is set to true, and false otherwise.
 export function canWork(creep: Creep): boolean {
   let working = creep.memory.working;
 

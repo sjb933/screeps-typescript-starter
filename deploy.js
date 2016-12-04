@@ -10,7 +10,7 @@ const BRANCH = config.get('screeps.branch')
 console.log('\n\nDeploying to server:', ENDPOINT);
 
 if (!EMAIL || !PASS) {
-  console.error('  -> ERROR:  Must set ENV vars to deploy: SCREEPS_EMAIL, SCREEPS_PASS')
+  console.error('  -> ERROR:  Must set ENV vars to deploy: SCREEPS_EMAIL, SCREEPS_PASS.  See README for more information')
   process.exit(1);
 }
 
@@ -20,7 +20,8 @@ let opts = {
     branch: BRANCH,
     modules: {
       'main': fs.readFileSync('./build/main.js', { encoding: 'utf8' }),
-      'main.js.map': 'module.exports = ' + fs.readFileSync('./build/main.js.map.js', { encoding: 'utf8' })
+      // Screeps will interpret the map file as a js file.  Prepending module.exports = to make the json a proper javascript module
+      'main.js.map': 'module.exports = ' + fs.readFileSync('./build/main.js.map', { encoding: 'utf8' })
     }
   }
 }

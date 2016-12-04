@@ -4,8 +4,7 @@ module.exports = {
   output: {
     filename: "./build/main.js",
     pathinfo: true,
-    libraryTarget: "commonjs2",
-    sourceMapFilename: '[file].map.js' // normally this is [file].map, but we need a js file, or it will be rejected by screeps server.
+    libraryTarget: "commonjs2"
   },
 
   target: "node",

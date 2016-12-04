@@ -9,12 +9,7 @@ export let creepCount: number = 0;
 
 export let harvesters: Creep[] = [];
 
-/**
- * Initialization scripts for CreepManager module.
- *
- * @export
- * @param {Room} room
- */
+// Initialization scripts for CreepManager module.
 export function run(room: Room): void {
   _loadCreeps(room);
   _buildMissingCreeps(room);
@@ -26,11 +21,7 @@ export function run(room: Room): void {
   });
 }
 
-/**
- * Loads and counts all available creeps.
- *
- * @param {Room} room
- */
+// Loads and counts all available creeps.
 function _loadCreeps(room: Room) {
   creeps = room.find<Creep>(FIND_MY_CREEPS);
   creepCount = _.size(creeps);
@@ -43,11 +34,7 @@ function _loadCreeps(room: Room) {
   }
 }
 
-/**
- * Creates a new creep if we still have enough space.
- *
- * @param {Room} room
- */
+// Creates a new creep if we still have enough space.
 function _buildMissingCreeps(room: Room) {
   let bodyParts: string[];
 
@@ -76,14 +63,7 @@ function _buildMissingCreeps(room: Room) {
   }
 }
 
-/**
- * Spawns a new creep.
- *
- * @param {Spawn} spawn
- * @param {string[]} bodyParts
- * @param {string} role
- * @returns
- */
+// Spawns a new creep
 function _spawnCreep(spawn: Spawn, bodyParts: string[], role: string) {
   let uuid: number = Memory.uuid;
   let status: number | string = spawn.canCreateCreep(bodyParts, undefined);

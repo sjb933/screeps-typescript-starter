@@ -1,11 +1,6 @@
 import * as creepActions from "../creepActions";
 
-/**
- * Runs all creep actions.
- *
- * @export
- * @param {Creep} creep
- */
+// Runs all creep actions
 export function run(creep: Creep): void {
   let spawn = creep.room.find<Spawn>(FIND_MY_SPAWNS)[0];
   let energySource = creep.room.find<Source>(FIND_SOURCES_ACTIVE)[0];
