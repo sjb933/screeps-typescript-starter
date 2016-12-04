@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.config.js",
     "tslint": "tslint \"src/**/*.ts\"",
     "typings": "typings",
-    "deploy": "npm run build && node ./deploy"
+    "deploy": "npm run build && node ./deploy",
+    "tsc": "tsc"
   },
   "author": "",
   "license": "MIT",

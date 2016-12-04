@@ -5,8 +5,7 @@ module.exports = {
     filename: "./build/main.js",
     pathinfo: true,
     libraryTarget: "commonjs2",
-    sourceMapFilename: '[file].map.js', // normally this is [file].map, but we need a js file, or it will be rejected by screeps server.
-    devtoolModuleFilenameTemplate: '[resource-path]',
+    sourceMapFilename: '[file].map.js' // normally this is [file].map, but we need a js file, or it will be rejected by screeps server.
   },
 
   target: "node",
@@ -27,8 +26,8 @@ module.exports = {
 
   externals: [
     {
-        // webpack will not try to rewrite require("main.js.map")
-        "main.js.map": "./main.js.map",
+      // webpack will not try to rewrite require("main.js.map")
+      "main.js.map": "./main.js.map",
     },
   ],
 

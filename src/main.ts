@@ -1,5 +1,5 @@
-import * as CreepManager from "./components/creeps/creepManager";
 import * as Config from "./config/config";
+import * as CreepManager from "./components/creeps/creepManager";
 
 import { log } from "./components/support/log";
 

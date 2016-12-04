@@ -1,4 +1,5 @@
 import * as Config from "../../config/config";
+
 import { LogLevels } from "./log.levels";
 
 // <caller> (<source>:<line>:<column>)
@@ -70,7 +71,7 @@ export class Log extends LogLevels {
     try {
       // tslint:disable-next-line
       var SourceMapConsumer = require("source-map").SourceMapConsumer;
-      const map = require("main.js.map").d;
+      const map = require("main.js.map");
       if (map) {
         Log.sourceMap = new SourceMapConsumer(map);
       }

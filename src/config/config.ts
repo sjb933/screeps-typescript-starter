@@ -4,7 +4,7 @@ import { LogLevels } from "../components/support/log.levels";
  * Enable this if you want a lot of text to be logged to console.
  * @type {boolean}
  */
-export const ENABLE_DEBUG_MODE: boolean = true;
+export const ENABLE_DEBUG_MODE: boolean = false;
 
 /**
  * Enable this to use the experimental PathFinder class.

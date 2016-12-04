@@ -20,7 +20,7 @@ let opts = {
     branch: BRANCH,
     modules: {
       'main': fs.readFileSync('./build/main.js', { encoding: 'utf8' }),
-      'main.js.map': fs.readFileSync('./build/main.js.map.js', { encoding: 'utf8' })
+      'main.js.map': 'module.exports = ' + fs.readFileSync('./build/main.js.map.js', { encoding: 'utf8' })
     }
   }
 }
