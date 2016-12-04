@@ -7,7 +7,7 @@ const EMAIL = config.get('screeps.auth.email');
 const PASS = config.get('screeps.auth.pass');
 const BRANCH = config.get('screeps.branch')
 
-console.log('\n\nDeploying to server:', ENDPOINT);
+console.log(`\n\nDeploying to server: ${ENDPOINT}  [Branch: ${BRANCH}]`);
 
 if (!EMAIL || !PASS) {
   console.error('  -> ERROR:  Must set ENV vars to deploy: SCREEPS_EMAIL, SCREEPS_PASS.  See README for more information')
